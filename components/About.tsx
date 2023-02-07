@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from '../styles/components/about.module.scss';
 import Mentor from './Mentor';
 
@@ -9,23 +10,23 @@ export default function About(): JSX.Element {
       <div id='about' className={styles.content}>
         <div className={styles.mentorsTree}>
           <h3 className={styles.subheading}>Mentors</h3>
-          <img className={styles.tree} src='./assets/svg/lines.svg' alt='lines' />
+          <Image className={styles.tree} src='./assets/svg/lines.svg' alt='lines' width='394' height='157' />
           <div className={styles.mentors}>
             <Mentor
               class={styles.mentor01}
-              src='./assets/img/mentor-01.jpg'
+              src='/assets/img/mentor-01.jpg'
               heading='Wade Warren'
               text='Front-end engineers work closely with designers'
             />
             <Mentor
               class={styles.mentor02}
-              src='./assets/img/mentor-02.jpg'
+              src='/assets/img/mentor-02.jpg'
               heading='Kristin Watson'
               text='Front-end engineers work closely with designers'
             />
             <Mentor
               class={styles.mentor03}
-              src='./assets/img/mentor-03.jpg'
+              src='/assets/img/mentor-03.jpg'
               heading='Robert Fox'
               text='Front-end engineers work closely with designers'
             />

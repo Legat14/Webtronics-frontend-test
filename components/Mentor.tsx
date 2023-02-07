@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from '../styles/components/mentor.module.scss';
 
 export default function Mentor(
@@ -8,7 +9,7 @@ export default function Mentor(
     <div className={`${styles.wrapper} ${props.class}`}>
       <div className={styles.border}>
         <div className={styles.imgWrapper}>
-          <img src={props.src} alt='mentor' />
+          <Image src={props.src} alt='mentor' width='184' height='184' />
         </div>
       </div>
       <div className={styles.descrioption}>

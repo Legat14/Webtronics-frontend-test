@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { useDispatch } from 'react-redux';
 import { selectQuestion } from '../store/slices/questionsSlice';
 import styles from '../styles/components/question.module.scss';
@@ -14,18 +15,19 @@ export default function Question(
   }
 
   return (
-    <div className={`${styles.wrapper} ${props.class} ${props.isOpened ? styles.wrapperOpened : styles.wrapperClosed}`}>
+    <div className={`${styles.wrapper} ${props.class} ${props.isOpened ? styles.wrapperOpened : styles.wrapperClosed}`}
+      onClick={handleClick}
+    >
       <div className={`${styles.border} ${props.isOpened ? styles.borderOpened : styles.borderClosed}`}>
       </div>
       <button
         className={`${styles.collapseBtn} ${props.isOpened ? styles.collapseBtnLeft : styles.collapseBtnRight}`}
-        onClick={handleClick}
       >
         {props.isOpened
           ?
-          <img src='./assets/svg/plus.svg' alt='plus' />
+          <Image src='./assets/svg/plus.svg' alt='plus' width='16' height='16' />
           :
-          <img src='./assets/svg/minus.svg' alt='minus' />
+          <Image src='./assets/svg/minus.svg' alt='minus' width='16' height='16' />
         }
       </button>
       <h4 className={styles.heading}>{props.question}</h4>

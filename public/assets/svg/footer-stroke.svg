@@ -1,10 +1,5 @@
 <svg width="1920" height="196" viewBox="0 0 1920 196" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_b_201_410)">
-<mask id="path-1-outside-1_201_410" maskUnits="userSpaceOnUse" x="0" y="0" width="1920" height="196" fill="black">
-<rect fill="white" width="1920" height="196"/>
-<path d="M0 1H1920V196H0V1Z"/>
-</mask>
-<path d="M0 1H1920V196H0V1Z" fill="white" fill-opacity="0.05"/>
 <path d="M0 2H1920V0H0V2Z" fill="url(#paint0_linear_201_410)" fill-opacity="0.7" mask="url(#path-1-outside-1_201_410)"/>
 </g>
 <defs>

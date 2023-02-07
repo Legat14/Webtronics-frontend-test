@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from '../styles/components/program.module.scss';
 
 export default function Program(
@@ -9,7 +10,7 @@ export default function Program(
       <div className={styles.border}>
       </div>
       <div className={styles.imgWrapper}>
-        <img src={props.src} alt='program' />
+        <Image src={props.src} alt='program' width='162' height='136' />
       </div>
       <h4 className={styles.heading}>{props.heading}</h4>
     </div>

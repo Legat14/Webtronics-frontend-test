@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { useSelector } from 'react-redux';
 import { questionsData } from '../data/questionsData';
 import { RootState } from '../store/store';
@@ -16,7 +17,7 @@ export default function Questions(): JSX.Element {
           <p className={`${styles.description} p1`}>
             Do you have any kind of questions? We are here to help.
           </p>
-          <img src='./assets/svg/question-mark.svg' alt='Question mark' />
+          <Image src='./assets/svg/question-mark.svg' alt='Question mark' width='1757' height='2383' />
         </div>
         <div className={styles.accordion}>
 

@@ -8,8 +8,10 @@
   height: 195px;
   padding-top: 33px;
   z-index: 1;
-  background: url(../../public/assets/svg/footer-frame.svg);
+  background: url(../../public/assets/svg/footer-stroke.svg);
+  background-color: $color-clean-5;
   background-position: top center;
+  backdrop-filter: blur(3px);
 }
 
 .wrapper {
@@ -18,11 +20,6 @@
   width: 1000px;
   margin: 0 auto;
   @include flex($justify: space-between);
-}
-
-.logo {
-  width: 169px;
-  height: 33px;
 }
 
 .link {
@@ -86,5 +83,11 @@
 
   img {
     cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  img:hover {
+    transform: scale(105%);
+    filter: drop-shadow(0 0 2px $color-clean);
   }
 }

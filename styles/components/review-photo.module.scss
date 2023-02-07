@@ -4,7 +4,6 @@
 .wrapper {
   position: relative;
   height: 424px;
-  cursor: pointer;
 }
 
 .wrapperOpened {
@@ -13,6 +12,11 @@
 
 .wrapperClosed {
   width: 186px;
+  cursor: pointer;
+}
+
+.wrapperClosed:hover .border {
+  filter: brightness(10);
 }
 
 .border {
@@ -29,24 +33,20 @@
   background-repeat: no-repeat;
 }
 
-.wrapper:hover .border {
-  filter: brightness(10);
-}
-
 .borderClosed {
   background: url(../../public/assets/svg/review-frame-closed.svg);
   background-repeat: no-repeat;
 }
 
 .imgWrapper {
-  height: 420px;
+  height: 422px;
   @include flex();
   z-index: 0;
   align-self: center;
 }
 
 .imgWrapperOpened {
-  width: 390px;
+  width: 392px;
   mask-image: url(../../public/assets/img/rewiew-mask-opened.png);
 
   img {
@@ -57,7 +57,7 @@
 }
 
 .imgWrapperClosed {
-  width: 182px;
+  width: 184px;
   mask-image: url(../../public/assets/img/rewiew-mask-closed.png);
 
   img {
