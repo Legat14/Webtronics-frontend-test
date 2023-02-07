@@ -22,11 +22,6 @@
   @include flex($justify: space-between);
 }
 
-.logo {
-  width: 169px;
-  height: 33px;
-}
-
 .link {
   text-align: center;
   color: $color-clean;

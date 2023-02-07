@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from '../styles/components/bg-stars.module.scss';
+import styles from '../styles/components/stars-bg.module.scss';
 
-export default function BgStars(): JSX.Element {
+export default function StarsBg(): JSX.Element {
 
   return (
-    <div className={styles.bgStars}>
+    <div className={styles.starsBg}>
       <img className={styles.star01} src={'./assets/svg/star.svg'} alt='star' />
       <img className={styles.star02} src={'./assets/svg/star.svg'} alt='star' />
       <img className={styles.star03} src={'./assets/svg/star.svg'} alt='star' />

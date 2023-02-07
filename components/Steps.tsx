@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from '../styles/components/steps.module.scss';
 import Step from './Step';
 
@@ -31,7 +32,7 @@ export default function Steps(): JSX.Element {
           />
         </div>
         <div className={styles.center}>
-          <img src='./assets/svg/axis.svg' alt='axis' />
+          <Image src='./assets/svg/axis.svg' alt='axis' width='175' height='892' />
         </div>
         <div className={`${styles.side} ${styles.sideRight}`}>
           <Step

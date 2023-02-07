@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from '../styles/components/gallery.module.scss';
 
 export default function Gallery(): JSX.Element {
@@ -19,16 +20,16 @@ export default function Gallery(): JSX.Element {
           and build a simple web page.
         </p>
         <div className={`${styles.imgWrapper} ${styles.imgWrapper1}`}>
-          <img src='./assets/img/gallery-01.jpg' alt='gallery-01' />
+          <img src='/assets/img/gallery-01.jpg' alt='gallery-01' />
         </div>
         <div className={`${styles.imgWrapper} ${styles.imgWrapper2}`}>
-          <img src='./assets/img/gallery-02.jpg' alt='gallery-02' />
+          <Image src='/assets/img/gallery-02.jpg' alt='gallery-02' fill />
         </div>
         <div className={`${styles.imgWrapper} ${styles.imgWrapper3}`}>
-          <img src='./assets/img/gallery-03.jpg' alt='gallery-03' />
+          <Image src='/assets/img/gallery-03.jpg' alt='gallery-03' fill />
         </div>
         <div className={`${styles.imgWrapper} ${styles.imgWrapper4}`}>
-          <img src='./assets/img/gallery-04.jpg' alt='gallery-04' />
+          <Image src='/assets/img/gallery-04.jpg' alt='gallery-04' fill />
         </div>
       </div>
     </section>

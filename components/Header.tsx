@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
 import pageIsScrolled from '../functions/pageIsScrolled';
 import { hideHeadersBg, showHeadersBg } from '../store/slices/headersBgToggleSlice';
-import { RootState, store } from '../store/store';
+import { RootState } from '../store/store';
 import styles from '../styles/components/header.module.scss';
 
 export default function Header(): JSX.Element {
@@ -24,7 +25,7 @@ export default function Header(): JSX.Element {
     <header className={styles.header}>
       <div className={`${!isShown ? styles.bg_hidden : null} ${styles.bg}`}></div>
       <a className={styles.linkLogo} href='#'>
-        <img className={styles.logo} src='./assets/svg/logo-webtronics.svg' alt='Webtronics' />
+        <Image className={styles.logo} src='./assets/svg/logo-webtronics.svg' alt='Webtronics' width='169' height='33' />
       </a>
       <nav className={styles.nav}>
         <a className={styles.link + ' p1'} href='#about'>About</a>

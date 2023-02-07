@@ -9,13 +9,13 @@ import Programs from './Programs';
 import Questions from './Questions';
 import Review from './Review';
 import Showcase from './Sowcase';
-import BgStars from './BgStars';
+import StarsBg from './StarsBg';
 import Steps from './Steps';
 
 export default function Landing(): JSX.Element {
   return (
     <main className={styles.landing}>
-      <BgStars />
+      <StarsBg />
       <Header />
       <Showcase />
       <About />

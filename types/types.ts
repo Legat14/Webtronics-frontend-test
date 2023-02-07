@@ -26,3 +26,10 @@ export type ReviewType = {
   title: string,
   text: string,
 }
+
+export type ProgramType = {
+  id: number,
+  class: string,
+  src: string,
+  heading: string,
+}
