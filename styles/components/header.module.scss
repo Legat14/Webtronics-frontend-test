@@ -17,7 +17,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../../public/assets/svg/header-bg-fill.svg), url(../../public/assets/svg/header-bg-stroke.svg);
+  background: url(../../public/assets/svg/header-bg-stroke.svg);
+  background-color: $color-clean-5;
   background-position: bottom center;
   backdrop-filter: blur(10px);
   z-index: 2;

@@ -6,8 +6,8 @@ export default function Step(
 ): JSX.Element {
   return (
     <div className={`${styles.wrapper} ${props.class}`}>
-      <div className={`${styles.border} ${props.isLeft ? styles.borderLeft : styles.borderRight}`}>
-      </div>
+      <div className={`${styles.stepBg} ${props.isLeft ? styles.stepBgLeft : styles.stepBgRight}`}></div>
+      <div className={`${styles.border} ${props.isLeft ? styles.borderLeft : styles.borderRight}`}></div>
       <div className={`${styles.description} ${props.isLeft ? styles.descriptionLeft : styles.descriptionRight}`}>
         <h4 className={styles.step}>Step {props.stepNumber}</h4>
         <h3 className={styles.heading}>{props.heading}</h3>
