@@ -33,3 +33,15 @@ export type ProgramType = {
   src: string,
   heading: string,
 }
+
+export type StepDataType = {
+  id: number,
+  class: string,
+  heading: string,
+  text: string,
+  isLeft: boolean,
+}
+
+export type StepType = StepDataType & {
+  stepNumber: number,
+}
