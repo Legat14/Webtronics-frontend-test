@@ -6,8 +6,9 @@
   top: 0;
   width: 100%;
   height: $height-header;
-  padding: 38px 350px 0 350px;
-  @include flex($justify: space-between);
+  padding-top: 38px;
+  @include flex($justify: center);
+  gap: 27%;
   z-index: 2;
 }
 

@@ -18,6 +18,10 @@
 .content {
   @include flex($justify: flex-start);
   gap: 18px;
+
+  @media screen and (max-width: 1400px) {
+    @include flex($justify: center);
+  }
 }
 
 .mentorsTree {

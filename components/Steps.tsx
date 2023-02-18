@@ -40,6 +40,22 @@ export default function Steps(): JSX.Element {
           />) }
         </div>
 
+        <div className={styles.stepsAdaptive}>
+          { stepsData.map((step) => <div className={styles.stepAdaptiveWrapper}>
+            {!step.isLeft ? <div className={styles.filler}></div> : null}
+            <Step
+              key={step.id}
+              class={step.class}
+              stepNumber={step.stepNumber}
+              heading={step.heading}
+              text={step.text}
+              isLeft={step.isLeft}
+            />
+            {step.isLeft ? <div className={styles.filler}></div> : null}
+          </div>
+          ) }
+        </div>
+
       </div>
     </section>
   );

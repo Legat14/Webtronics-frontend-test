@@ -3,7 +3,7 @@
 
 .steps {
   position: relative;
-  width: 1213px;
+  width: 100vw;
   margin: 0 auto 180px;
   @include flex($direction: column);
   z-index: 1;
@@ -15,8 +15,8 @@
 }
 
 .wrapper {
-  width: 1202px;
-  margin-top: 54px;
+  max-width: 1202px;
+  margin: 54px auto 0;
   @include flex($justify: space-between);
 }
 
@@ -24,12 +24,38 @@
   width: 491px;
   @include flex($direction: column, $justify: flex-start);
   gap: 144px;
+
+  @media screen and (max-width: 1400px) {
+    display: none;
+  }
 }
 
 .center img {
   margin-top: 102px;
+
+  @media screen and (max-width: 1400px) {
+    display: none;
+  }
 }
 
 .sideRight {
   margin-top: 125px;
+}
+
+.stepsAdaptive {
+  width: 50vw;
+  display: none;
+  
+  @media screen and (max-width: 1400px) {
+    @include flex($direction: column, $justify: space-between);
+  }
+  
+  .stepAdaptiveWrapper {
+    @include flex();
+  }
+
+  .filler {
+    flex-grow: 1;
+  }
+  
 }
