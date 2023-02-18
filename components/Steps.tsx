@@ -15,14 +15,14 @@ export default function Steps(): JSX.Element {
       <div className={styles.wrapper}>
 
         <div className={styles.side}>
-          { stepDataOdd.map((step) => <Step
-            key={step.id}
+          {stepDataOdd.map((step) => <Step
+            key={'wide' + step.id}
             class={step.class}
             stepNumber={step.stepNumber}
             heading={step.heading}
             text={step.text}
             isLeft={step.isLeft}
-          />) }
+          />)}
         </div>
 
         <div className={styles.center}>
@@ -30,21 +30,23 @@ export default function Steps(): JSX.Element {
         </div>
 
         <div className={`${styles.side} ${styles.sideRight}`}>
-          { stepDataEven.map((step) => <Step
-            key={step.id}
+          {stepDataEven.map((step) => <Step
+            key={'wide' + step.id}
             class={step.class}
             stepNumber={step.stepNumber}
             heading={step.heading}
             text={step.text}
             isLeft={step.isLeft}
-          />) }
+          />)}
         </div>
 
         <div className={styles.stepsAdaptive}>
-          { stepsData.map((step) => <div className={styles.stepAdaptiveWrapper}>
+          {stepsData.map((step) => <div
+            key={'thin' + step.id}
+            className={styles.stepAdaptiveWrapper}
+          >
             {!step.isLeft ? <div className={styles.filler}></div> : null}
             <Step
-              key={step.id}
               class={step.class}
               stepNumber={step.stepNumber}
               heading={step.heading}
@@ -53,7 +55,7 @@ export default function Steps(): JSX.Element {
             />
             {step.isLeft ? <div className={styles.filler}></div> : null}
           </div>
-          ) }
+          )}
         </div>
 
       </div>

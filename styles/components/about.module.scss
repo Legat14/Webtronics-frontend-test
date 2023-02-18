@@ -16,7 +16,8 @@
 }
 
 .content {
-  @include flex($justify: flex-start);
+  width: 100%;
+  @include flex($justify: space-between);
   gap: 18px;
 
   @media screen and (max-width: 1400px) {
@@ -61,7 +62,8 @@
 
 .description {
   position: relative;
-  top: 109px;
+  top: -90px;
+  left: -120px;
   width: 485px;
   color: $color-clean;
 }

@@ -18,12 +18,13 @@
 }
 
 .wrapper {
-  @include flex($justify: space-between);
+  width: 100%;
+  @include flex($justify: space-between, $align: flex-start);
 }
 
 .reviewContent {
   padding-top: 125px;
-  @include flex($direction: column, $justify: flex-start);
+  @include flex($direction: column, $justify: flex-start, $align: flex-start);
   gap: 17px;
 }
 
@@ -42,6 +43,7 @@
 }
 
 .carouselPanel {
+  width: 100%;
   @include flex($justify: space-between);
 }
 

@@ -4,6 +4,6 @@
 .landing {
   width: 100%;
   height: $height-site;
-  @include flex($direction: column);
+  @include flex($direction: column, $justify: flex-start);
   background-color: $color-bg;
 }

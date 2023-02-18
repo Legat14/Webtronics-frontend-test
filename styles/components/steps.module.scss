@@ -15,9 +15,9 @@
 }
 
 .wrapper {
-  max-width: 1202px;
+  width: 1202px;
   margin: 54px auto 0;
-  @include flex($justify: space-between);
+  @include flex($justify: space-between, $align: flex-start);
 }
 
 .side {
@@ -45,11 +45,11 @@
 .stepsAdaptive {
   width: 50vw;
   display: none;
-  
+
   @media screen and (max-width: 1400px) {
     @include flex($direction: column, $justify: space-between);
   }
-  
+
   .stepAdaptiveWrapper {
     @include flex();
   }
@@ -57,5 +57,5 @@
   .filler {
     flex-grow: 1;
   }
-  
+
 }

@@ -2,10 +2,11 @@
 @import '../general/mixins';
 
 .questions {
+  width: 100%;
   position: relative;
   width: 1223px;
   margin: 0 auto 180px;
-  @include flex($direction: column);
+  @include flex($direction: column, $align: flex-start);
   z-index: 1;
 }
 
@@ -18,7 +19,13 @@
 }
 
 .wrapper {
-  @include flex($justify: space-between);
+  width: 1460px;
+  @include flex($justify: space-between, $align: flex-start);
+
+  @media screen and (max-width: 1400px) {
+    @include flex($direction: column);
+    gap: 30px;
+  }
 }
 
 .question img {
@@ -29,11 +36,11 @@
 
 .description {
   width: 280px;
-  align-self: center;
   color: $color-clean;
 }
 
 .accordion {
+  width: 100%;
   @include flex($direction: column, $justify: space-between);
   gap: 24px;
 }
