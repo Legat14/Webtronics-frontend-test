@@ -17,11 +17,11 @@
 
 .content {
   width: 100%;
-  @include flex($justify: space-between);
+  @include flex($justify: space-between, $align: flex-start);
   gap: 18px;
 
   @media screen and (max-width: 1400px) {
-    @include flex($justify: center);
+    @include flex($align: flex-start);
   }
 }
 
@@ -62,8 +62,13 @@
 
 .description {
   position: relative;
-  top: -90px;
+  top: 108px;
   left: -120px;
   width: 485px;
   color: $color-clean;
+
+
+  @media screen and (max-width: 1400px) {
+    left: 0;
+  }
 }

@@ -7,6 +7,10 @@
   margin: 0 auto 182px;
   @include flex($direction: column);
   z-index: 1;
+
+  @media screen and (max-width: 1400px) {
+    width: 1160px;
+  }
 }
 
 .heading {
@@ -23,6 +27,12 @@
   grid-template-columns: 1fr 600px 1fr;
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 24px;
+
+  @media screen and (max-width: 1400px) {
+    height: 800px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
 }
 
 .text1,
@@ -55,6 +65,11 @@
   grid-column: 2 / 4;
   grid-row: 3 / 4;
   align-self: end;
+
+  @media screen and (max-width: 1400px) {
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+  }
 }
 
 .imgWrapper1 {
@@ -64,6 +79,10 @@
   img {
     left: -115px;
     height: 100%;
+  }
+
+  @media screen and (max-width: 1400px) {
+    grid-row: 2 / 5;
   }
 }
 
@@ -76,6 +95,11 @@
     left: -30px;
     height: 100%;
   }
+
+  @media screen and (max-width: 1400px) {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }
 }
 
 .imgWrapper3 {
@@ -86,6 +110,11 @@
     left: -8px;
     height: 100%;
   }
+
+  @media screen and (max-width: 1400px) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
 }
 
 .imgWrapper4 {
@@ -95,5 +124,10 @@
   img {
     left: -18px;
     height: 100%;
+  }
+
+  @media screen and (max-width: 1400px) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
   }
 }

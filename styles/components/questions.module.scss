@@ -8,6 +8,10 @@
   margin: 0 auto 180px;
   @include flex($direction: column, $align: flex-start);
   z-index: 1;
+
+  @media screen and (max-width: 1400px) {
+    @include flex($direction: column, $align: center);
+  }
 }
 
 .heading {
@@ -23,7 +27,8 @@
   @include flex($justify: space-between, $align: flex-start);
 
   @media screen and (max-width: 1400px) {
-    @include flex($direction: column);
+    width: 703px;
+    @include flex($direction: column, $justify: center, $align: center);
     gap: 30px;
   }
 }
@@ -32,6 +37,10 @@
   position: absolute;
   top: -662px;
   left: -350px;
+
+  @media screen and (max-width: 1400px) {
+    top: -860px;
+  }
 }
 
 .description {

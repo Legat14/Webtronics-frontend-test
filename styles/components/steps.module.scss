@@ -18,6 +18,10 @@
   width: 1202px;
   margin: 54px auto 0;
   @include flex($justify: space-between, $align: flex-start);
+
+  @media screen and (max-width: 1400px) {
+    @include flex($align: flex-start);
+  }
 }
 
 .side {
@@ -51,6 +55,7 @@
   }
 
   .stepAdaptiveWrapper {
+    width: 100%;
     @include flex();
   }
 
