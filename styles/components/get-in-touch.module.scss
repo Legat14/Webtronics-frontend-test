@@ -3,20 +3,32 @@
 
 .getInTouch {
   position: relative;
-  width: 1226px;
+  width: 64vw;
   margin: 0 auto 180px;
   @include flex($direction: column);
   z-index: 1;
 }
 
-.border {
+.wrapper {
+  position: relative;
   width: 100%;
   height: 600px;
   padding: 56px 0;
   @include flex($direction: column, $justify: space-between);
+  background-color: $color-clean-5;
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  padding: 56px 0;
   background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
   -webkit-mask-box-image: url(../../public/assets/img/round-borders-rectangle.png) 33.3% fill;
   mask-image: url(../../public/assets/img/round-borders-rectangle.png) 33.3% fill;
+  backdrop-filter: blur(3px);
 
   * {
     align-self: center;
