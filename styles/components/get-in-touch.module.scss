@@ -14,7 +14,9 @@
   height: 600px;
   padding: 56px 0;
   @include flex($direction: column, $justify: space-between);
-  background: url(../../public/assets/svg/contact-border.svg);
+  background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
+  -webkit-mask-box-image: url(../../public/assets/img/round-borders-rectangle.png) 33.3% fill;
+  mask-image: url(../../public/assets/img/round-borders-rectangle.png) 33.3% fill;
 
   * {
     align-self: center;
