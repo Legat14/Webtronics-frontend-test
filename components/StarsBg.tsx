@@ -23,6 +23,7 @@ export default function StarsBg(): JSX.Element {
       <img className={styles.star16} src={'./assets/svg/star.svg'} alt='star' />
       <img className={styles.star17} src={'./assets/svg/star.svg'} alt='star' />
       <img className={styles.star18} src={'./assets/svg/star.svg'} alt='star' />
+      <img className={styles.star19} src={'./assets/svg/star.svg'} alt='star' />
     </div>
   );
 }

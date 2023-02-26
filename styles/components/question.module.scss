@@ -4,7 +4,7 @@
 .wrapper {
   position: relative;
   width: 703px;
-  @include flex($direction: column, $justify: flex-start);
+  @include flex($direction: column, $justify: flex-start, $align: flex-start);
   gap: 16px;
   overflow: hidden;
 }

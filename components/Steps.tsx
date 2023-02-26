@@ -2,61 +2,62 @@ import React from 'react';
 import Image from 'next/image';
 import styles from '../styles/components/steps.module.scss';
 import Step from './Step';
+import { stepsData } from '../data/stepsData';
 
 export default function Steps(): JSX.Element {
+
+  const stepDataOdd = stepsData.filter((step) => step.stepNumber % 2 !== 0);
+  const stepDataEven = stepsData.filter((step) => step.stepNumber % 2 === 0);
+
   return (
     <section id='steps' className={styles.steps}>
       <h2 className={styles.heading}>Steps</h2>
       <div className={styles.wrapper}>
+
         <div className={styles.side}>
-          <Step
-            class=''
-            stepNumber={1}
-            heading='Introduction to Front-End'
-            text='Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.'
-            isLeft={true}
-          />
-          <Step
-            class=''
-            stepNumber={3}
-            heading='Introduction to Front-End'
-            text='Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.'
-            isLeft={true}
-          />
-          <Step
-            class=''
-            stepNumber={5}
-            heading='Introduction to Front-End'
-            text='Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.'
-            isLeft={true}
-          />
+          {stepDataOdd.map((step) => <Step
+            key={'wide' + step.id}
+            class={step.class}
+            stepNumber={step.stepNumber}
+            heading={step.heading}
+            text={step.text}
+            isLeft={step.isLeft}
+          />)}
         </div>
+
         <div className={styles.center}>
           <Image src='./assets/svg/axis.svg' alt='axis' width='175' height='892' />
         </div>
+
         <div className={`${styles.side} ${styles.sideRight}`}>
-          <Step
-            class=''
-            stepNumber={2}
-            heading='Overview of Development'
-            text='Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.'
-            isLeft={false}
-          />
-          <Step
-            class=''
-            stepNumber={4}
-            heading='Overview of Development'
-            text='Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.'
-            isLeft={false}
-          />
-          <Step
-            class=''
-            stepNumber={6}
-            heading='Overview of Development'
-            text='Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.'
-            isLeft={false}
-          />
+          {stepDataEven.map((step) => <Step
+            key={'wide' + step.id}
+            class={step.class}
+            stepNumber={step.stepNumber}
+            heading={step.heading}
+            text={step.text}
+            isLeft={step.isLeft}
+          />)}
         </div>
+
+        <div className={styles.stepsAdaptive}>
+          {stepsData.map((step) => <div
+            key={'thin' + step.id}
+            className={styles.stepAdaptiveWrapper}
+          >
+            {!step.isLeft ? <div className={styles.filler}></div> : null}
+            <Step
+              class={step.class}
+              stepNumber={step.stepNumber}
+              heading={step.heading}
+              text={step.text}
+              isLeft={step.isLeft}
+            />
+            {step.isLeft ? <div className={styles.filler}></div> : null}
+          </div>
+          )}
+        </div>
+
       </div>
     </section>
   );

@@ -9,6 +9,10 @@ html {
 body {
   height: $height-site;
   -ms-overflow-style: none;
+
+  @media screen and (max-width: 1400px) {
+    height: $height-site-l;
+  }
 }
 
 body::-webkit-scrollbar {
@@ -17,6 +21,7 @@ body::-webkit-scrollbar {
 
 main {
   position: relative;
+  overflow: hidden;
 }
 
 h1 {

@@ -2,7 +2,7 @@
 @import '../general/mixins';
 
 .showcase {
-  padding-top: 25px;
+  padding-top: 187px;
   padding-bottom: 190px;
   z-index: 1;
 }
@@ -13,17 +13,29 @@
   width: 1190px;
   height: 365px;
   margin: auto;
+
+  @media screen and (max-width: 1400px) {
+    width: 1050px;
+    height: 280px;
+    @include flex($direction: row, $justify: center, $align: flex-start);
+  }
 }
 
 .heading {
   width: 1088px;
-  @include flex($direction: column, $justify: space-between);
+  @include flex($direction: column, $justify: spa, $align: flex-start);
+  gap: 10px;
   color: $color-clean;
 
   .secondH1Word {
     width: 100%;
-    margin-top: -25px;
+    margin-top: -35px;
     text-align: end;
+  }
+
+  @media screen and (max-width: 1400px) {
+    width: 800px;
+    font-size: 100px;
   }
 }
 
@@ -33,6 +45,10 @@
   right: 0;
   width: 360px;
   color: $color-clean;
+
+  @media screen and (max-width: 1400px) {
+    top: 50px;
+  }
 }
 
 .subheading {
@@ -46,4 +62,9 @@
   position: absolute;
   bottom: 82px;
   left: -7px;
+
+  @media screen and (max-width: 1400px) {
+    left: 70px;
+    bottom: 50px;
+  }
 }

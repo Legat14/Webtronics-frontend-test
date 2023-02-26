@@ -8,6 +8,10 @@
   margin: 0 auto 180px;
   @include flex($direction: column);
   z-index: 1;
+
+  @media screen and (max-width: 1400px) {
+    width: 810px;
+  }
 }
 
 .heading {
@@ -18,13 +22,25 @@
 }
 
 .wrapper {
-  @include flex($justify: space-between);
+  width: 100%;
+  @include flex($justify: space-between, $align: flex-start);
+
+  @media screen and (max-width: 1400px) {
+    @include flex($direction: column);
+    flex-flow: column;
+  }
 }
 
 .reviewContent {
   padding-top: 125px;
-  @include flex($direction: column, $justify: flex-start);
+  @include flex($direction: column, $justify: flex-start, $align: flex-start);
   gap: 17px;
+
+  @media screen and (max-width: 1400px) {
+    height: 200px;
+    padding-top: 30px;
+    order: 2;
+  }
 }
 
 .title {
@@ -34,14 +50,23 @@
 .text {
   width: 392px;
   color: $color-clean;
+
+  @media screen and (max-width: 1400px) {
+    width: 100%;
+  }
 }
 
 .carousel {
   @include flex($direction: column);
   gap: 16px;
+
+  @media screen and (max-width: 1400px) {
+    order: 1;
+  }
 }
 
 .carouselPanel {
+  width: 100%;
   @include flex($justify: space-between);
 }
 

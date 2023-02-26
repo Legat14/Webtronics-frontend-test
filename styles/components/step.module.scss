@@ -20,14 +20,14 @@
 .borderLeft {
   background: url(../../public/assets/svg/stroke-left.svg),
     url(../../public/assets/svg/step-frame.svg);
-    background-repeat: no-repeat;
-    background-position: top right, center left;
-  }
+  background-repeat: no-repeat;
+  background-position: top right, center left;
+}
 
-  .borderRight {
+.borderRight {
   background: url(../../public/assets/svg/stroke-right.svg),
     url(../../public/assets/svg/step-frame.svg);
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: top left, center right;
 }
 
@@ -56,11 +56,11 @@
 }
 
 .descriptionLeft {
-  padding: 42.5px 42.5px 0 24px;
+  padding: 0 42.5px 0 24px;
 }
 
 .descriptionRight {
-  padding: 42.5px 24px 0 42.5px;
+  padding: 0 24px 0 42.5px;
 }
 
 .step {
