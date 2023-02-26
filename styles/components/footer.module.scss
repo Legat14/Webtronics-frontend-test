@@ -16,10 +16,13 @@
 
 .wrapper {
   position: relative;
-  left: -112px;
+  left: -6%;
   width: 1000px;
   margin: 0 auto;
   @include flex($justify: space-between, $align: flex-start);
+  @media screen and (max-width: 1400px) {
+    left: 0;
+  }
 }
 
 .link {
