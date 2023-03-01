@@ -3,7 +3,7 @@
 
 .starsBg {
   position: absolute;
-  top: 0;
+  top: var(--bg-position);
   width: 100vw;
   height: 100%;
   z-index: 0;
