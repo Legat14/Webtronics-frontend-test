@@ -1,4 +1,6 @@
+import getPagePosition from "./getPagePositionY";
+
 export default function pageIsScrolled(headerHeight: number): boolean {
-  const yOffset = window.pageYOffset;
+  const yOffset = getPagePosition();
   return yOffset > headerHeight;
 }

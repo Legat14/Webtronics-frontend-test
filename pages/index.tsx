@@ -2,8 +2,14 @@ import Head from 'next/head';
 import Landing from '../components/Landing';
 import { store } from '../store/store';
 import { Provider } from 'react-redux';
+import setScrollEventListener from '../functions/setScrollEventListener';
+import { useEffect } from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    setScrollEventListener();
+  }, []);
+
   return (
     <>
       <Provider store={store}>
