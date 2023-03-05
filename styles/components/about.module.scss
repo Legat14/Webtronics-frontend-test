@@ -7,6 +7,10 @@
   margin: 0 auto 180px;
   @include flex($direction: column);
   z-index: 1;
+
+  @media screen and (max-width: 1200px) {
+    width: 610px;
+  }
 }
 
 .heading {
@@ -23,6 +27,10 @@
   @media screen and (max-width: 1400px) {
     @include flex($align: flex-start);
   }
+
+  @media screen and (max-width: 1200px) {
+    @include flex($direction: column, $align: center);
+  }
 }
 
 .mentorsTree {
@@ -30,6 +38,10 @@
   width: 607px;
   height: 483px;
   @include flex($direction: column, $justify: flex-start);
+
+  @media screen and (max-width: 1200px) {
+    height: 420px;
+  }
 }
 
 .tree {

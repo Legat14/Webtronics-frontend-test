@@ -20,6 +20,7 @@
   @include flex($justify: space-between, $align: flex-start);
 
   @media screen and (max-width: 1400px) {
+    width: auto;
     @include flex($align: flex-start);
   }
 }
@@ -52,6 +53,10 @@
 
   @media screen and (max-width: 1400px) {
     @include flex($direction: column, $justify: space-between);
+  }
+
+  @media screen and (max-width: 992px) {
+    width: 70vw;
   }
 
   .stepAdaptiveWrapper {
