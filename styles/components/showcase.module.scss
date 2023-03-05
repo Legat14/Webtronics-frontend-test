@@ -19,6 +19,12 @@
     height: 280px;
     @include flex($direction: row, $justify: center, $align: flex-start);
   }
+
+  @media screen and (max-width: 1200px) {
+    width: auto;
+    height: 460px;
+    @include flex($direction: column, $justify: space-between, $align: center);
+  }
 }
 
 .heading {
@@ -37,6 +43,10 @@
     width: 800px;
     font-size: 100px;
   }
+
+  @media screen and (max-width: 1200px) {
+    order: 0;
+  }
 }
 
 .description {
@@ -49,13 +59,26 @@
   @media screen and (max-width: 1400px) {
     top: 50px;
   }
+
+  @media screen and (max-width: 1200px) {
+    position: static;
+    align-self: flex-end;
+    order: 2;
+  }
 }
 
 .subheading {
   position: absolute;
-  bottom: 0;
+  bottom: 1;
   right: 20px;
   color: $color-clean;
+
+  @media screen and (max-width: 1200px) {
+    margin-left: 100px;
+    position: static;
+    align-self: flex-start;
+    order: 1;
+  }
 }
 
 .btn {
@@ -66,5 +89,10 @@
   @media screen and (max-width: 1400px) {
     left: 70px;
     bottom: 50px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    position: static;
+    order: 3;
   }
 }

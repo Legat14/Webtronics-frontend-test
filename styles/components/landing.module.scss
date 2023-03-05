@@ -3,11 +3,15 @@
 
 .landing {
   width: 100%;
-  height: $height-site;
+  height: $height-site-xxl;
   @include flex($direction: column, $justify: flex-start);
   background-color: $color-bg;
 
   @media screen and (max-width: 1400px) {
-    height: $height-site-l;
+    height: $height-site-xl;
+  }
+
+  @media screen and (max-width: 1200px) {
+    height: $height-site-lg;
   }
 }
