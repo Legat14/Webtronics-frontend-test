@@ -1,5 +1,5 @@
-@import '../general/vars';
-@import '../general/mixins';
+@import "../general/vars";
+@import "../general/mixins";
 
 .getInTouch {
   position: relative;
@@ -7,6 +7,8 @@
   margin: 0 auto 180px;
   @include flex($direction: column);
   z-index: 1;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 .wrapper {
@@ -25,9 +27,15 @@
   width: 100%;
   height: 600px;
   padding: 56px 0;
-  background: linear-gradient(152.14deg, rgba(21, 191, 253, 0.7) 9.96%, rgba(156, 55, 253, 0.7) 100%);
-  -webkit-mask-box-image: url(../../public/assets/img/round-borders-rectangle.png) 33.3% fill;
-  mask-image: url(../../public/assets/img/round-borders-rectangle.png) 33.3% fill;
+  background: linear-gradient(
+    152.14deg,
+    rgba(21, 191, 253, 0.7) 9.96%,
+    rgba(156, 55, 253, 0.7) 100%
+  );
+  -webkit-mask-box-image: url(../../public/assets/img/round-borders-rectangle.png)
+    33.3% fill;
+  mask-image: url(../../public/assets/img/round-borders-rectangle.png) 33.3%
+    fill;
   backdrop-filter: blur(3px);
 
   * {
@@ -39,6 +47,7 @@
   margin-bottom: 16px;
   align-self: center;
   text-align: center;
+  z-index: 2;
   color: $color-clean;
 }
 
@@ -46,4 +55,5 @@
   margin-bottom: 19px;
   color: $color-clean;
   text-align: center;
+  z-index: 2;
 }
